@@ -46,7 +46,7 @@ export function HistogramChart(props) {
     <div style={{ display: 'flex' }}>
       <Chart
           width={2000}
-          height={600}
+          height={700}
           chartType="ColumnChart"
           loader={<div>Loading Chart</div>}
           data={monthsdata}
@@ -59,6 +59,7 @@ export function HistogramChart(props) {
             },
             vAxis: {
               title: 'Count',
+              minValue: 0,
             },
           }}
           legendToggle
