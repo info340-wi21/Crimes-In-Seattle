@@ -1,6 +1,10 @@
 {
     "months": [
         {
+            "month": "",
+            "points": []
+        },
+        {
             "month": "January",
             "points": [
                 { "lat": 47.6300904, "long": -122.3153814, "description": "Noise Residential"},
