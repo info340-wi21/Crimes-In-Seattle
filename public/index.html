@@ -29,6 +29,43 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <nav>
+      <div>
+          <ul class="navbar">
+              <li class="nav-items">
+                  <i class="fa fa-bars fa-lg"></i>
+              </li>
+              <li class="nav-items">
+                  <a href="index.html"><img class="icon-style" src="./favicon.ico" alt="shield"></a>
+              </li>
+              <li class="nav-items"><a href="index.html">Main</a></li>
+              <li class="nav-items"><a href="landing.html">Resources</a></li>
+          </ul>
+      </div>
+      <div class="mobile">
+          <a href="#" class="close-mobile-nav">&times;</a>
+          <ul class="mobile-nav">
+              <li class="mobile-nav-items"><a href="index.html">Main</a></li>
+          </ul>
+      </div>
+  </nav>
+  <header>
+      <div>
+          <h1>Seattle Alerts</h1>
+          <p>With our inncident tracking plot and map below, gain a better understanding of your surroundings in Seattle</p>
+      </div>
+  </header>
+  <main>
+      <section id="about">
+          <h2>About</h2>
+          <button type="button" class="collapsible">Click to Read About Us</button>
+          <p id="content">
+              Our general topic is regarding community incident awareness in Seattle. Oftentimes, we see police or EMT reporting to an incident, however, community members are left without a clear understanding of what happened. This can lead to misinformation being
+              spread, and as members of the UW, we have witnessed this ourselves right in the University District and throughout the city. With proper awareness and awareness of their surroundings, people will be able to safely navigate their day. A
+              comprehensive app that displays recent incidents that happened in Seattle and specific communities using data from the Seattle Police Department, as well as community input will give community members the information they need to be alerted
+              and feel safe.
+          </p>
+      </section>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -40,4 +77,11 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
+  
+  <footer>
+    <address>
+      Contact us at <a href="mailto:ysuzuki1@uw.edu">ysuzuki1@uw.edu</a>, or at <a href="tel:206-271-9956">206-271-9956</a>.
+    </address>
+    <p>&copy; 2021 Jerry Viena, Byeong Ik Kang, Yui Suzuki.</p>
+</footer>
 </html>

@@ -60,6 +60,7 @@ export function HistogramChart(props) {
             vAxis: {
               title: 'Count',
               minValue: 0,
+              position: 'right',
             },
           }}
           legendToggle
