@@ -15,7 +15,17 @@
                 { "lat": 47.6653081, "long": -122.3234532, "description": "Trespass" },
                 { "lat": 47.6750387, "long": -122.3487119, "description": "Weapon, Person with Gun" },
                 { "lat": 47.5250387, "long": -122.3287119, "description": "Traffic - Moving Violation" },
-                { "lat": 47.6753387, "long": -122.3187119, "description": "Hazards" }
+                { "lat": 47.6753387, "long": -122.3187119, "description": "Hazards" },
+                { "lat": 47.6230387, "long": -122.3247119, "description": "Mischeif" },
+                { "lat": 47.6254387, "long": -122.3257119, "description": "Trespass" },
+                { "lat": 47.6250587, "long": -122.3267119, "description": "Suicide" },
+                { "lat": 47.6250367, "long": -122.3277119, "description": "Parking Violation" },
+                { "lat": 47.6250388, "long": -122.3387119, "description": "Suspicious Stop" },
+                { "lat": 47.6340387, "long": -122.3427119, "description": "Suspicious Person" },
+                { "lat": 47.5450387, "long": -122.3217119, "description": "Premise Check" },
+                { "lat": 47.5550387, "long": -122.3286119, "description": "Rape" },
+                { "lat": 47.5650387, "long": -122.3288119, "description": "Threats" },
+                { "lat": 47.5750387, "long": -122.3289119, "description": "Traffic - Moving Violation" }
             ]
         },
         {
@@ -31,7 +41,17 @@
             { "lat": 47.6250387, "long": -122.3147119, "description": "Noise Complaint" },
             { "lat": 47.5750387, "long": -122.3157119, "description": "Traffic" },
             { "lat": 47.5352387, "long": -122.3167119, "description": "Homicide" },
-            { "lat": 47.5622387, "long": -122.3177119, "description": "Premise Check" }
+            { "lat": 47.5622387, "long": -122.3177119, "description": "Premise Check" },
+            { "lat": 47.6120387, "long": -122.3187119, "description": "Mischeif" },
+            { "lat": 47.6130387, "long": -122.3287119, "description": "Threats" },
+            { "lat": 47.6140387, "long": -122.3387119, "description": "Suspicious Person" },
+            { "lat": 47.6150387, "long": -122.3487119, "description": "Fight" },
+            { "lat": 47.6150387, "long": -122.3217119, "description": "Theft" },
+            { "lat": 47.6150387, "long": -122.3227119, "description": "Off Duty Employment" },
+            { "lat": 47.6150387, "long": -122.3237119, "description": "Prowler - Trespass" },
+            { "lat": 47.6170387, "long": -122.3247119, "description": "Disturbance" },
+            { "lat": 47.6180387, "long": -122.3257119, "description": "Property Dest" },
+            { "lat": 47.6190387, "long": -122.3286119, "description": "Burglary" }
         ]},
         {
             "month": "Mar",
@@ -46,8 +66,17 @@
             { "lat": 47.6450387, "long": -122.3187819, "description": "Traffic - Moving Violation" },
             { "lat": 47.6558387, "long": -122.4187119, "description": "Premise Check" },
             { "lat": 47.6250387, "long": -122.3187119, "description": "Traffic - D.U.I" },
-            { "lat": 47.6552387, "long": -122.4187119, "description": "Theft" }
-      
+            { "lat": 47.6552387, "long": -122.4187119, "description": "Theft" },
+            { "lat": 47.6120387, "long": -122.3187119, "description": "Mischeif" },
+            { "lat": 47.6130387, "long": -122.3287119, "description": "Threats" },
+            { "lat": 47.6140387, "long": -122.3387119, "description": "Suspicious Person" },
+            { "lat": 47.6150387, "long": -122.3487119, "description": "Fight" },
+            { "lat": 47.6150387, "long": -122.3217119, "description": "Theft" },
+            { "lat": 47.6150387, "long": -122.3227119, "description": "Off Duty Employment" },
+            { "lat": 47.6150387, "long": -122.3237119, "description": "Prowler - Trespass" },
+            { "lat": 47.6170387, "long": -122.3247119, "description": "Disturbance" },
+            { "lat": 47.6180387, "long": -122.3257119, "description": "Property Dest" },
+            { "lat": 47.6190387, "long": -122.3286119, "description": "Burglary" }
         ]},
         {
             "month": "Apr",
@@ -60,7 +89,17 @@
             { "lat": 47.6354287, "long": -122.2987119, "description": "Assist Other Agency" },
             { "lat": 47.6453187, "long": -122.3887119, "description": "Disturbance - Fight" },
             { "lat": 47.6552387, "long": -122.3187119, "description": "Traffic - Moving Violation" },
-            { "lat": 47.6951387, "long": -122.3167119, "description": "Premise Check" }
+            { "lat": 47.6951387, "long": -122.3167119, "description": "Premise Check" },
+            { "lat": 47.6172175, "long": -122.3088277, "description": "Domestic Violence, Two Arrests" },
+            { "lat": 47.660775, "long": -122.3587119, "description": "Premise Check" },
+            { "lat": 47.6653081, "long": -122.3234532, "description": "Trespass" },
+            { "lat": 47.6750387, "long": -122.3487119, "description": "Weapon, Person with Gun" },
+            { "lat": 47.5250387, "long": -122.3287119, "description": "Traffic - Moving Violation" },
+            { "lat": 47.6753387, "long": -122.3187119, "description": "Hazards" },
+            { "lat": 47.6230387, "long": -122.3247119, "description": "Mischeif" },
+            { "lat": 47.6254387, "long": -122.3257119, "description": "Trespass" },
+            { "lat": 47.6250587, "long": -122.3267119, "description": "Suicide" },
+            { "lat": 47.6250367, "long": -122.3277119, "description": "Parking Violation" }
         ]},
         {
             "month": "May",
@@ -74,7 +113,16 @@
             { "lat": 47.6750387, "long": -122.3487119, "description": "Assults" },
             { "lat": 47.6003299, "long": -122.3033528, "description": "Prowler, Trespassing" },
             { "lat": 47.618089, "long": -122.3378697, "description": "Public Disturbance" },
-            { "lat": 47.6484202, "long": -122.3767639, "description": "Property Damage"}
+            { "lat": 47.6484202, "long": -122.3767639, "description": "Property Damage"},
+            { "lat": 47.6130387, "long": -122.3287119, "description": "Threats" },
+            { "lat": 47.6140387, "long": -122.3387119, "description": "Suspicious Person" },
+            { "lat": 47.6150387, "long": -122.3487119, "description": "Fight" },
+            { "lat": 47.6150387, "long": -122.3217119, "description": "Theft" },
+            { "lat": 47.6150387, "long": -122.3227119, "description": "Off Duty Employment" },
+            { "lat": 47.6150387, "long": -122.3237119, "description": "Prowler - Trespass" },
+            { "lat": 47.6170387, "long": -122.3247119, "description": "Disturbance" },
+            { "lat": 47.6180387, "long": -122.3257119, "description": "Property Dest" },
+            { "lat": 47.6190387, "long": -122.3286119, "description": "Burglary" }
         ]},
         {
             "month": "Jun",
@@ -86,7 +134,17 @@
             { "lat": 47.6780916, "long": -122.2559121, "description": "Weapon Possession, Vandalism" },
             { "lat": 47.5550387, "long": -122.2987119, "description": "Burglary" },
             { "lat": 47.6930387, "long": -122.3357119, "description": "Disturbance" },
-            { "lat": 47.5350387, "long": -122.3267119, "description": "Premise Check" }
+            { "lat": 47.5350387, "long": -122.3267119, "description": "Premise Check" },
+            { "lat": 47.6103219, "long": -122.3347258, "description": "Suspicious Activity, Weapon Possession" },
+            { "lat": 47.6239534, "long": -122.3359976, "description": "Thief, No Injuries" },
+            { "lat": 47.6354287, "long": -122.2987119, "description": "Assist Other Agency" },
+            { "lat": 47.6453187, "long": -122.3887119, "description": "Disturbance - Fight" },
+            { "lat": 47.6552387, "long": -122.3187119, "description": "Traffic - Moving Violation" },
+            { "lat": 47.6951387, "long": -122.3167119, "description": "Premise Check" },
+            { "lat": 47.6172175, "long": -122.3088277, "description": "Domestic Violence, Two Arrests" },
+            { "lat": 47.660775, "long": -122.3587119, "description": "Premise Check" },
+            { "lat": 47.6653081, "long": -122.3234532, "description": "Trespass" },
+            { "lat": 47.6750387, "long": -122.3487119, "description": "Weapon, Person with Gun" }
         ]},
         {
             "month": "Jul",
@@ -99,7 +157,16 @@
             { "lat": 47.6450387, "long": -122.3257119, "description": "Traffic - Moving Violation" },
             { "lat": 47.6750387, "long": -122.3367119, "description": "Assist Public" },
             { "lat": 47.6240387, "long": -122.3477119, "description": "Traffic - Parking Violation" },
-            { "lat": 47.6330387, "long": -122.3587119, "description": "Premise Check" }
+            { "lat": 47.6330387, "long": -122.3587119, "description": "Premise Check" },
+            { "lat": 47.6130387, "long": -122.3287119, "description": "Threats" },
+            { "lat": 47.6140387, "long": -122.3387119, "description": "Suspicious Person" },
+            { "lat": 47.6150387, "long": -122.3487119, "description": "Fight" },
+            { "lat": 47.6150387, "long": -122.3217119, "description": "Theft" },
+            { "lat": 47.6150387, "long": -122.3227119, "description": "Off Duty Employment" },
+            { "lat": 47.6150387, "long": -122.3237119, "description": "Prowler - Trespass" },
+            { "lat": 47.6170387, "long": -122.3247119, "description": "Disturbance" },
+            { "lat": 47.6180387, "long": -122.3257119, "description": "Property Dest" },
+            { "lat": 47.6190387, "long": -122.3286119, "description": "Burglary" }
         ]},
         {
             "month": "Aug",
@@ -126,7 +193,16 @@
             { "lat": 47.6003299, "long": -122.3033528, "description": "Prowler, Trespassing" },
             { "lat": 47.618089, "long": -122.3378697, "description": "Public Disturbance" },
             { "lat": 47.6484202, "long": -122.3767639, "description": "Property Damage"},
-            { "lat": 47.5641914, "long": -122.3229431, "description": "Automobile Recovery" }
+            { "lat": 47.5641914, "long": -122.3229431, "description": "Automobile Recovery" },
+            { "lat": 47.6130387, "long": -122.3287119, "description": "Threats" },
+            { "lat": 47.6140387, "long": -122.3387119, "description": "Suspicious Person" },
+            { "lat": 47.6150387, "long": -122.3487119, "description": "Fight" },
+            { "lat": 47.6150387, "long": -122.3217119, "description": "Theft" },
+            { "lat": 47.6150387, "long": -122.3227119, "description": "Off Duty Employment" },
+            { "lat": 47.6150387, "long": -122.3237119, "description": "Prowler - Trespass" },
+            { "lat": 47.6170387, "long": -122.3247119, "description": "Disturbance" },
+            { "lat": 47.6180387, "long": -122.3257119, "description": "Property Dest" },
+            { "lat": 47.6190387, "long": -122.3286119, "description": "Burglary" }
         ]},
         {
             "month": "Oct",
@@ -138,7 +214,17 @@
             { "lat": 47.6359652, "long": -122.3403869, "description": "Fire Hazard" },
             { "lat": 47.649324, "long": -122.3327054, "description": "Suspicious Activity" },
             { "lat": 47.5618058, "long": -122.2848802, "description": "Vehicle Theft" },
-            { "lat": 47.5493207, "long": -122.3332545, "description": "Warrant Arrest" }
+            { "lat": 47.5493207, "long": -122.3332545, "description": "Warrant Arrest" },
+            { "lat": 47.516554, "long": -122.3551997, "description": "Attempted Robbery "},
+            { "lat": 47.6408029, "long": -122.3549604, "description": "Suspicious Vehicle" },
+            { "lat": 47.6172175, "long": -122.3088277, "description": "Domestic Violence, Two Arrests" },
+            { "lat": 47.660775, "long": -122.3587119, "description": "Premise Check" },
+            { "lat": 47.6653081, "long": -122.3234532, "description": "Trespass" },
+            { "lat": 47.6750387, "long": -122.3487119, "description": "Weapon, Person with Gun" },
+            { "lat": 47.5250387, "long": -122.3287119, "description": "Traffic - Moving Violation" },
+            { "lat": 47.6753387, "long": -122.3187119, "description": "Hazards" },
+            { "lat": 47.6230387, "long": -122.3247119, "description": "Mischeif" },
+            { "lat": 47.6254387, "long": -122.3257119, "description": "Trespass" }
         ]},
         {
             "month": "Nov",
@@ -151,7 +237,16 @@
             { "lat": 47.649324, "long": -122.3327054, "description": "Suspicious Activity" },
             { "lat": 47.5618058, "long": -122.2848802, "description": "Vehicle Theft" },
             { "lat": 47.5493207, "long": -122.3332545, "description": "Warrant Arrest" },
-            { "lat": 47.5832013, "long": -122.3372529, "description": "Hazardous Waste, Cleanup" }
+            { "lat": 47.5832013, "long": -122.3372529, "description": "Hazardous Waste, Cleanup" },
+            { "lat": 47.6130387, "long": -122.3287119, "description": "Threats" },
+            { "lat": 47.6140387, "long": -122.3387119, "description": "Suspicious Person" },
+            { "lat": 47.6150387, "long": -122.3487119, "description": "Fight" },
+            { "lat": 47.6150387, "long": -122.3217119, "description": "Theft" },
+            { "lat": 47.6150387, "long": -122.3227119, "description": "Off Duty Employment" },
+            { "lat": 47.6150387, "long": -122.3237119, "description": "Prowler - Trespass" },
+            { "lat": 47.6170387, "long": -122.3247119, "description": "Disturbance" },
+            { "lat": 47.6180387, "long": -122.3257119, "description": "Property Dest" },
+            { "lat": 47.6190387, "long": -122.3286119, "description": "Burglary" }
         ]},
         {
             "month": "Dec",
@@ -164,7 +259,18 @@
             { "lat": 47.6045849, "long": -122.3300728, "description": "Mass Demonstration, Roadblock" },
             { "lat": 47.5978313, "long": -122.3264048, "description": "Assault, Vandalism" },
             { "lat": 47.6407409, "long": -122.3022743, "description": "Premise Check, Crime Prevention" },
-            { "lat": 47.6450387, "long": -122.3257119, "description": "Traffic - Moving Violation" }
+            { "lat": 47.6450387, "long": -122.3257119, "description": "Traffic - Moving Violation" },
+            { "lat": 47.6003299, "long": -122.3033528, "description": "Prowler, Trespassing" },
+            { "lat": 47.618089, "long": -122.3378697, "description": "Public Disturbance" },
+            { "lat": 47.5618058, "long": -122.2848802, "description": "Vehicle Theft" },
+            { "lat": 47.5493207, "long": -122.3332545, "description": "Warrant Arrest" },
+            { "lat": 47.6354287, "long": -122.2987119, "description": "Assist Other Agency" },
+            { "lat": 47.6453187, "long": -122.3887119, "description": "Disturbance - Fight" },
+            { "lat": 47.6199584, "long": -122.3472844, "description": "Store Burgulary" },
+            { "lat": 47.6750387, "long": -122.3487119, "description": "Assults" },
+            { "lat": 47.6003299, "long": -122.3033528, "description": "Prowler, Trespassing" },
+            { "lat": 47.6095754, "long": -122.3285414, "description": "Building Fire" },
+            { "lat": 47.5562526, "long": -122.3350033, "description": "Hazardous Waste" }
         ]}
     ]
 }
