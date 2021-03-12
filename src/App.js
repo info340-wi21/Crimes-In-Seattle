@@ -14,7 +14,9 @@ function App(props) {
       <main>
           <section id="about">
           </section>
-
+          <div className="test">
+            <Card months = { props.data.months }/>
+          </div>
           <div className="container">
 
               <section>
@@ -30,6 +32,25 @@ function App(props) {
 }
 
 export default App;
+
+export function Card(props) {
+  let months = props.months;
+  let monthsdata = [];
+  for(let i = 1; i < props.months.length; i++){
+    monthsdata.push({month : months[i].month, count : months[i].points.length})
+  }
+  console.log(monthsdata)
+  console.log(monthsdata["Jan"]);
+  return (
+    <div>
+        {monthsdata.map(month => (
+          <div className="card">
+            <div className="month" key={month.month}>{month.month}:{month.count}</div>
+          </div>
+        ))}
+    </div>
+  )
+}
 
 export function Title() {
   return (

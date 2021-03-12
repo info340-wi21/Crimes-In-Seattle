@@ -3,6 +3,14 @@
     box-sizing: border-box;
 }
 
+.card {
+    flex: 0 0 250px;
+    background-color: white;
+    margin: .5rem;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16),
+                0 1px 3px rgba(0, 0, 0, 0.23);
+  }
 
 /* Body styling */
 
