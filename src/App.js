@@ -4,6 +4,7 @@ import CrimeMap from './CrimeMap';
 import {Link, NavLink, Redirect, Route} from 'react-router-dom';
 import {Switch} from 'react-router-dom';
 import 'leaflet/dist/leaflet.css';
+import {RenderSignIn} from './signIn';
 
 function App(props) {
   return (
@@ -18,7 +19,7 @@ function App(props) {
       
       <main>
         <Switch>
-          <Route path="/main"><section id="about"></section></Route>
+          <Route path="/main"><section id="about"></section><RenderSignIn /></Route>
           <Route path="/about">
               <section id="about"></section>
               <div className="test">
