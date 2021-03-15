@@ -3,7 +3,7 @@ import CrimeMap from './CrimeMap';
 import {Link, NavLink, Redirect, Route} from 'react-router-dom';
 import {Switch} from 'react-router-dom';
 import 'leaflet/dist/leaflet.css';
-import {RenderSignIn} from './signIn';
+import {RenderSignIn} from './SignIn';
 import React, { useState } from 'react';
 
 function App(props) {
@@ -34,7 +34,10 @@ function App(props) {
       
       <main>
         <Switch>
-          <Route path="/main"><section id="about"></section><RenderSignIn /></Route>
+          <Route path="/main">
+            <section id="about"></section>
+            <RenderSignIn />
+          </Route>
           <Route path="/about">
               <section id="about"></section>
               <CardList months = { props.data.months } clickCallback= { handleClick }/>
