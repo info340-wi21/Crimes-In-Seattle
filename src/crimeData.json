@@ -5,7 +5,7 @@
             "points": []
         },
         {
-            "month": "Jan",
+            "month": "January",
             "points": [
                 { "lat": 47.6300904, "long": -122.3153814, "description": "Noise Residential"},
                 { "lat": 47.516554, "long": -122.3551997, "description": "Attempted Robbery "},
@@ -29,7 +29,7 @@
             ]
         },
         {
-            "month": "Feb",
+            "month": "February",
             "points": [
             { "lat": 47.6003299, "long": -122.3033528, "description": "Prowler, Trespassing" },
             { "lat": 47.618089, "long": -122.3378697, "description": "Public Disturbance" },
@@ -54,7 +54,7 @@
             { "lat": 47.6190387, "long": -122.3286119, "description": "Burglary" }
         ]},
         {
-            "month": "Mar",
+            "month": "March",
             "points": [
             { "lat": 47.649324, "long": -122.3327054, "description": "Suspicious Activity" },
             { "lat": 47.5618058, "long": -122.2848802, "description": "Vehicle Theft" },
@@ -79,7 +79,7 @@
             { "lat": 47.6190387, "long": -122.3286119, "description": "Burglary" }
         ]},
         {
-            "month": "Apr",
+            "month": "April",
             "points": [
             { "lat": 47.6256436, "long": -122.2924695, "description": "Intoxicated Person" },
             { "lat": 47.6199584, "long": -122.3472844, "description": "Store Burgulary" },
@@ -125,7 +125,7 @@
             { "lat": 47.6190387, "long": -122.3286119, "description": "Burglary" }
         ]},
         {
-            "month": "Jun",
+            "month": "June",
             "points": [
             { "lat": 47.5696992, "long": -122.2908779, "description": "Shots Fired, No Injuries" },
             { "lat": 47.6647215, "long": -122.3137739, "description": "Suspicious Activity" },
@@ -147,7 +147,7 @@
             { "lat": 47.6750387, "long": -122.3487119, "description": "Weapon, Person with Gun" }
         ]},
         {
-            "month": "Jul",
+            "month": "July",
             "points": [
             { "lat": 47.5839642, "long": -122.3287421, "description": "Narcotics Charge" },
             { "lat": 47.5855464, "long": -122.3260577, "description": "Physical Alteration" },
@@ -169,7 +169,7 @@
             { "lat": 47.6190387, "long": -122.3286119, "description": "Burglary" }
         ]},
         {
-            "month": "Aug",
+            "month": "August",
             "points": [
             { "lat": 47.6361977, "long": -122.3061419, "description": "Theft, Assault" },
             { "lat": 47.6176113, "long": -122.3198503, "description": "Hit and Run, Three Injuries" },
@@ -183,7 +183,7 @@
             { "lat": 47.660775, "long": -122.3587119, "description": "Premise Check" }
         ]},
         {
-            "month": "Sep",
+            "month": "September",
             "points": [
             { "lat": 47.6752983, "long": -122.387305, "description": "Residential Bugulary" },
             { "lat": 47.6035188, "long": -122.3076022, "description": "Gas Leak" },
@@ -205,7 +205,7 @@
             { "lat": 47.6190387, "long": -122.3286119, "description": "Burglary" }
         ]},
         {
-            "month": "Oct",
+            "month": "October",
             "points": [
             { "lat": 47.5836503, "long": -122.3043961, "description": "Vehicle Collision, Two Injuries" },
             { "lat": 47.637693, "long": -122.3664155, "description": "Stabbing, One Injury" },
@@ -227,7 +227,7 @@
             { "lat": 47.6254387, "long": -122.3257119, "description": "Trespass" }
         ]},
         {
-            "month": "Nov",
+            "month": "November",
             "points": [
             { "lat": 47.6801535, "long": -122.3175769, "description": "Gunshots, One Death" },
             { "lat": 47.6500705, "long": -122.3499924, "description": "Intoxicated Driver, No Injuries" },
@@ -249,7 +249,7 @@
             { "lat": 47.6190387, "long": -122.3286119, "description": "Burglary" }
         ]},
         {
-            "month": "Dec",
+            "month": "December",
             "points": [
             { "lat": 47.6502445, "long": -122.3511149, "description": "Vehicle Hijacking" },
             { "lat": 47.6750387, "long": -122.3187119, "description": "COVID Cases, 5 Positive" },

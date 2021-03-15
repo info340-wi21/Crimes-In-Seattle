@@ -1,12 +1,27 @@
-// import React, { useState } from 'react';
 import Chart from "react-google-charts";
 import CrimeMap from './CrimeMap';
 import {Link, NavLink, Redirect, Route} from 'react-router-dom';
 import {Switch} from 'react-router-dom';
 import 'leaflet/dist/leaflet.css';
 import {RenderSignIn} from './signIn';
+import React, { useState } from 'react';
 
 function App(props) {
+
+  const theMonths = props.data.months;
+
+  const [clicked, setClick] = useState(theMonths);
+
+  const handleClick = (month) => {
+    const monthsCopy =  clicked.map( months => {
+      if (months.month === month) { 
+        months.clicked = true;
+      }
+      return months;
+    });
+    setClick(monthsCopy);
+  }
+
   return (
     <div>
       <nav>
@@ -22,12 +37,8 @@ function App(props) {
           <Route path="/main"><section id="about"></section><RenderSignIn /></Route>
           <Route path="/about">
               <section id="about"></section>
-              <div className="test">
-                <Card months = { props.data.months }/>
-              </div>
-              <section>
-                <HistogramChart months = { props.data.months }/>
-              </section>
+              <CardList months = { props.data.months } clickCallback= { handleClick }/>
+              <HistogramChart months = { props.data.months }/>
           </Route>
           <Route path="/map">
             <section id="about"></section>
@@ -49,23 +60,49 @@ function App(props) {
 
 export default App;
 
-export function Card(props) {
-  let months = props.months;
+export function CardList(props) {
   let monthsdata = [];
+  let months = props.months;
   for(let i = 1; i < props.months.length; i++){
-    monthsdata.push({month : months[i].month, count : months[i].points.length})
+    monthsdata.push({month : months[i].month, count : months[i].points.length, clicked: months[i].clicked, points: months[i].points})
   }
-  console.log(monthsdata)
-  console.log(monthsdata["Jan"]);
+  let cards = monthsdata.map(month => {
+    return <Card month = {month} clickCallback={props.clickCallback}></Card> 
+  });
   return (
-    <div>
-        {monthsdata.map(month => (
-          <div className="card">
-            <div className="month" key={month.month}>{month.month}:{month.count}</div>
-          </div>
-        ))}
+    <div className="card-container">
+        { cards }
     </div>
-  )
+  );
+}
+
+export function Card(props) {
+  let card;
+  let descriptions = [];
+  for (let i = 0; i < 3; i++) {
+    descriptions.push(props.month.points[i].description)
+  }
+  if (props.month.clicked === true) {
+    let descs = descriptions.map( description => {
+      return <p>* {description}</p>
+    })
+    card = (<div className="card">
+        <p> Common incidents for this month were:</p>
+        { descs }
+        <p>total: {props.month.count} cases</p>
+      </div>)
+  } else {
+    card = (
+      <div className="card" onClick= { () => {props.clickCallback(props.month.month)}}>
+        <div className="month" key={props.month.month}>
+          <h2> In {props.month.month} there were</h2>
+          <p>{props.month.count}</p>
+          <h2>cases</h2>
+        </div>
+      </div>
+    )
+  }
+  return card;
 }
 
 export function Title() {
@@ -104,7 +141,7 @@ export function HistogramChart(props) {
   let months = props.months;
   let monthsdata = months.map (month => {
     return(
-      [month.month, month.points.length]
+      [month.month.substring(0,3), month.points.length]
     ) 
   });
   monthsdata[0] = ["Month", "Number of Incidents"];
@@ -112,7 +149,7 @@ export function HistogramChart(props) {
     <div className="chart-container" style={{ display: 'flex' }}>
       <Chart
           width={'100%'}
-          height={'100%'}
+          height={'400px'}
           chartType="ColumnChart"
           loader={<div>Loading Chart</div>}
           data={monthsdata}
