@@ -46,9 +46,7 @@ function App(props) {
           <Route path="/map">
             <section id="about"></section>
             <div className="container">
-              <section>
-                <CrimeMap />
-              </section>
+                <CrimeMap points={props.data.months}/>
             </div>
           </Route>
           <Redirect to="/" />
