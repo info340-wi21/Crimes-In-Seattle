@@ -6,6 +6,27 @@ export function RenderLog() {
     let [user, setUser] = useState(undefined);
     const [isLoading, setIsLoading] = useState(true);
 
+    let [incident, setIncident] = useState('');
+    let [month, setMonth] = useState('');
+    let [location, setLocation] = useState('');
+
+    const handleIncidentChange = event => {
+        setIncident(event.target.value);
+    }
+    const handleMonthChange = event => {
+        setMonth(event.target.value);
+    }
+    const handleLocationChange = event => {
+        setLocation(event.target.value);
+    }
+    const handleFormReset = event => {
+        event.preventDefault();
+        let clear = "";
+        setIncident(clear);
+        setMonth(clear);
+        setLocation(clear);
+    }
+
     useEffect(() => {
         const authUnregisterFunction = firebase.auth().onAuthStateChanged((firebaseUser) => {
             if(firebaseUser) {
@@ -29,7 +50,16 @@ export function RenderLog() {
         return <NotSignedIn />
     } else {
         return <div>
-            <LogForm user={user}/>
+            <LogForm
+                user={user}
+                incident={incident}
+                month={month}
+                location={location}
+                incidentChange={handleIncidentChange}
+                montchChange={handleMonthChange}
+                locationChange={handleLocationChange}
+                restForm={handleFormReset}
+            />
             {/*<RenderUserLog uid={user.uid}/>    uncomment when RenderUserLog is working*/}
         </div>
     }
@@ -37,29 +67,16 @@ export function RenderLog() {
 
 export function LogForm(props) {
     let userRef = firebase.database().ref(props.user.uid);
-    let [incident, setIncident] = useState('');
-    let [month, setMonth] = useState('');
-    let [location, setLocation] = useState('');
-
-    const handleIncidentChange = event => {
-        setIncident(event.target.value);
-    }
-    const handleMonthChange = event => {
-        setMonth(event.target.value);
-    }
-    const handleLocationChange = event => {
-        setLocation(event.target.value);
-    }
 
     return <div className="logForm">
         <Form>
             <Label for="incident">Incident:</Label>
-            <Input type="text" name="incident" id="incident" placeholder="What was the incident?" onChange={handleIncidentChange} />
+            <Input type="text" name="incident" id="incident" placeholder="What was the incident?" value={props.incident} onChange={props.incidentChange} />
             <Label for="month">Month:</Label>
-            <Input type="text" name="month" id="month" placeholder="What month?" onChange={handleMonthChange} />
+            <Input type="text" name="month" id="month" placeholder="What month?" value={props.month} onChange={props.montchChange} />
             <Label for="location">Location:</Label>
-            <Input type="text" name="location" id="location" placeholder="What location?" onChange={handleLocationChange} />
-            <Button onClick={() => {userRef.push({'incident': incident, 'month': month, 'location': location})}} color="primary">Submit</Button>
+            <Input type="text" name="location" id="location" placeholder="What location?" value={props.location} onChange={props.locationChange} />
+            <Button onClick={() => {userRef.push({'incident': props.incident, 'month': props.month, 'location': props.location})}} type="submit" onSubmit={props.restForm} color="primary">Submit</Button>
         </Form>
     </div>
 }
