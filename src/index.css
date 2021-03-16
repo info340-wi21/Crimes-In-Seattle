@@ -117,6 +117,7 @@ h1 {
     display: flex;
     background-color: white;
     flex-direction: column;
+    padding-top: 1rem;
 }
 
 #about h2 {
@@ -178,4 +179,51 @@ Form {
     flex-direction: column;
     width: 40%;
     padding-top: 1rem;
+}
+
+
+/* Video styling */
+
+.video,
+.resources {
+    margin: 2rem;
+}
+
+iframe {
+    width: 712px;
+    height: 400px;
+}
+
+.landing {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
+/* Resources styling */
+
+.resources {
+    overflow: scroll;
+    height: 400px;
+    background-color: lightgray;
+    border-radius: 5%;
+    text-align: center;
+}
+
+.resource {
+    max-width: 500px;
+    margin: 1rem;
+    background: white;
+    border-radius: 3%;
+}
+
+p {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    display: block;
+}
+
+img {
+    width: 100%;
 }

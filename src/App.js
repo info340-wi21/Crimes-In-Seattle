@@ -1,5 +1,6 @@
 import Chart from "react-google-charts";
 import CrimeMap from './CrimeMap';
+import Main from './Main';
 import {Link, NavLink, Redirect, Route} from 'react-router-dom';
 import {Switch} from 'react-router-dom';
 import 'leaflet/dist/leaflet.css';
@@ -34,17 +35,15 @@ function App(props) {
       
       <main>
         <Switch>
-          <Route path="/main">
-            <section id="about"></section>
+          <Route exact path="/">
             <RenderSignIn />
+            <Main />
           </Route>
           <Route path="/about">
-              <section id="about"></section>
               <CardList months = { props.data.months } clickCallback= { handleClick }/>
               <HistogramChart months = { props.data.months }/>
           </Route>
           <Route path="/map">
-            <section id="about"></section>
             <div className="container">
                 <CrimeMap points={props.data.months}/>
             </div>
@@ -109,7 +108,7 @@ export function Card(props) {
 export function Title() {
   return (
     <div className='heading'>
-      <h1><Link to="/main">Seattle Alerts</Link></h1>
+      <h1><Link to="/">Seattle Alerts</Link></h1>
       <p>With our incident tracking plot and map below, gain a better understanding of your surroundings in Seattle</p>
     </div>
   )
@@ -119,7 +118,7 @@ export function NavBar() {
   return (
     <div>
       <ul className="navbar">
-        <li className="nav-items"><NavLink to="/main" activeClassName="activeLink">Main</NavLink></li>
+        <li className="nav-items"><NavLink to="/" activeClassName="activeLink">Main</NavLink></li>
         <li className="nav-items"><NavLink to="/about" activeClassName="activeLink">Histogram</NavLink></li>
         <li className="nav-items"><NavLink to="/map" activeClassName="activeLink">Map</NavLink></li>
       </ul>
