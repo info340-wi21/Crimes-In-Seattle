@@ -181,6 +181,12 @@ Form {
     padding-top: 1rem;
 }
 
+.logForm Form {
+    display: flex;
+    width: 100%;
+    padding: 1rem;
+}
+
 
 /* Video styling */
 

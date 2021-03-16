@@ -34,7 +34,7 @@ export function RenderSignIn() {
         return function cleanup() {
             authUnregisterFunction();
         }
-    })
+    }, [])
 
     if(isLoading) {
         return <div className='d-flex justify-content-center m-2'><p>Loading...</p></div>

@@ -7,6 +7,7 @@ import SAMPLE_DATA from './crimeData.json';
 import {BrowserRouter as Router} from 'react-router-dom';
 import firebase from 'firebase/app';
 import 'firebase/auth';
+import 'firebase/database';
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyDdASmrDjabP2zne7t47qIccNvkx2qlBps",

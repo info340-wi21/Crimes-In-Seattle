@@ -5,6 +5,7 @@ import {Link, NavLink, Redirect, Route} from 'react-router-dom';
 import {Switch} from 'react-router-dom';
 import 'leaflet/dist/leaflet.css';
 import {RenderSignIn} from './SignIn';
+import {RenderLog} from './Log';
 import React, { useState } from 'react';
 
 function App(props) {
@@ -47,6 +48,9 @@ function App(props) {
             <div className="container">
                 <CrimeMap points={props.data.months}/>
             </div>
+          </Route>
+          <Route path="/log">
+            <RenderLog />
           </Route>
           <Redirect to="/" />
         </Switch>
@@ -121,6 +125,7 @@ export function NavBar() {
         <li className="nav-items"><NavLink to="/" activeClassName="activeLink">Main</NavLink></li>
         <li className="nav-items"><NavLink to="/about" activeClassName="activeLink">Histogram</NavLink></li>
         <li className="nav-items"><NavLink to="/map" activeClassName="activeLink">Map</NavLink></li>
+        <li className="nav-items"><NavLink to="/log" activeClassName="activeLink">Log</NavLink></li>
       </ul>
     </div>
   )
