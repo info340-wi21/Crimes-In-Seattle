@@ -51,10 +51,10 @@ function App(props) {
           <Route path="/log">
             <RenderLog />
           </Route>
-          <Redirect to="/" />
           <Route path="/about/:resourceId">
             <About />
           </Route>
+          <Redirect to="/" />
         </Switch>
       </main>
       <Footer />
