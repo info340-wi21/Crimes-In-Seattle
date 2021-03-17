@@ -1,9 +1,15 @@
 import {useState, useEffect} from 'react';
 import firebase from 'firebase/app';
-import { Form, Label, Input, Button, Card, CardGroup, CardBody, CardTitle, CardText } from 'reactstrap';
+import { Form, FormGroup, Label, Input, Button, Alert, Card, CardGroup, CardBody, CardTitle, CardText } from 'reactstrap';
 
 export function RenderLog() {
+
     let [user, setUser] = useState(undefined);
+
+    const [visible, setVisible] = useState(false);
+    const showAlert = () => setVisible(true);
+    const closeAlert = () => setVisible(false);
+
     const [isLoading, setIsLoading] = useState(true);
 
     let [incident, setIncident] = useState('');
@@ -25,7 +31,6 @@ export function RenderLog() {
         setIncident(clear);
         setMonth(clear);
         setLocation(clear);
-
     }
 
     useEffect(() => {
@@ -61,6 +66,9 @@ export function RenderLog() {
                 monthChange={handleMonthChange}
                 locationChange={handleLocationChange}
                 resetForm={handleFormReset}
+                visible={visible}
+                showAlert={showAlert}
+                closeAlert={closeAlert}
             />
             <RenderUserLog user={user}/>
         </div>
@@ -70,15 +78,74 @@ export function RenderLog() {
 export function LogForm(props) {
     let userRef = firebase.database().ref(props.user.uid);
 
+    let incidentInput;
+    if (!props.incident) {
+        incidentInput = (
+            <FormGroup>
+                <Label for="incident">Incident:</Label>
+                <Input required type="text" name="incident" id="incident" placeholder="What was the incident?" value={props.incident} onChange={props.incidentChange} />
+            </FormGroup>
+        )
+    } else {
+        incidentInput = (
+            <FormGroup>
+                <Label for="incident">Incident:</Label>
+                <Input required valid type="text" name="incident" id="incident" placeholder="What was the incident?" value={props.incident} onChange={props.incidentChange} />
+            </FormGroup>
+        )
+    }
+    let monthInput;
+    if (!props.month) {
+        monthInput = (
+            <FormGroup>
+                <Label for="month">Month:</Label>
+                <Input required type="text" name="month" id="month" placeholder="What month?" value={props.month} onChange={props.monthChange} />
+            </FormGroup>
+        )
+    } else {
+        monthInput = (
+            <FormGroup>
+                <Label for="month">Month:</Label>
+                <Input valid required type="text" name="month" id="month" placeholder="What month?" value={props.month} onChange={props.monthChange} />
+            </FormGroup>
+        )
+    }
+    let locationInput;
+    if (!props.location) {
+        locationInput = (
+            <FormGroup>
+                <Label for="location">Location:</Label>
+                <Input required type="text" name="location" id="location" placeholder="What location?" value={props.location} onChange={props.locationChange} />
+            </FormGroup>
+        )
+    } else {
+        locationInput = (
+            <FormGroup>
+                <Label for="location">Location:</Label>
+                <Input valid required type="text" name="location" id="location" placeholder="What location?" value={props.location} onChange={props.locationChange} />
+            </FormGroup>
+        )
+    }
+
+    let whenClicked = () => {
+        if (props.incident && props.month && props.location) {
+            userRef.push({'incident': props.incident, 'month': props.month, 'location': props.location});
+            let getAlert = props.showAlert;
+            getAlert();   
+        }
+    }
+
     return <div className="logForm">
-        <Form>
-            <Label for="incident">Incident:</Label>
-            <Input type="text" name="incident" id="incident" placeholder="What was the incident?" value={props.incident} onChange={props.incidentChange} />
-            <Label for="month">Month:</Label>
-            <Input type="text" name="month" id="month" placeholder="What month?" value={props.month} onChange={props.monthChange} />
-            <Label for="location">Location:</Label>
-            <Input type="text" name="location" id="location" placeholder="What location?" value={props.location} onChange={props.locationChange} />
-            <Button onClick={() => {userRef.push({'incident': props.incident, 'month': props.month, 'location': props.location})}} type="submit" onSubmit={props.resetForm} color="primary">Submit</Button>
+        <Form onSubmit={props.resetForm}>
+            {incidentInput}
+            {monthInput}
+            {locationInput}
+            <FormGroup>
+                <Button onClick={whenClicked} type="submit" color="primary">Submit</Button>
+            </FormGroup>
+            <FormGroup>
+                <Alert color="success" isOpen={props.visible} toggle={props.closeAlert}>Your submission has been successfully logged!</Alert>
+            </FormGroup>
         </Form>
     </div>
 }
