@@ -1,6 +1,9 @@
 import alert from './img/alert.png';
 import spd from './img/spd.png';
 import sng from './img/sng.png';
+import { Redirect } from 'react-router-dom';
+import { useState } from 'react';
+
 
 
 export function Main() {
@@ -32,6 +35,11 @@ export default Main;
 
 export function Resource() {
 
+    const [redirectTo, setRedirectTo] = useState(undefined);
+    if (redirectTo) {
+        return <Redirect push to={'/about/' + redirectTo}/>
+    }
+
     return (
         <section className="landing">
             <div className="video">
@@ -40,23 +48,17 @@ export function Resource() {
             </div>
             <section className="resources">
                 <h2>Resource Links</h2>
-                <div className="resource">
-                    <a href="https://alert.seattle.gov/ ">
-                        <h3>Official Emergency Notification for the City of Seattle</h3>
-                        <img alt="seattle alert log" src={alert}/>
-                    </a>
+                <div className="resource" onClick={() => {setRedirectTo("Seattle Alert")}} >
+                    <h3>Official Emergency Notification for the City of Seattle</h3>
+                    <img alt="seattle alert log" src={alert}/>
                 </div>
-                <div className="resource">
-                    <a href="http://www.seattle.gov/police/need-help/when-should-i-call-911">
-                        <h3>Seattle Police Department</h3>
-                        <img alt="seattle police department logo" src={spd}/>
-                    </a>
+                <div className="resource" onClick={() => {setRedirectTo("Seattle Police")}} >
+                    <h3>Seattle Police Department</h3>
+                    <img alt="seattle police department logo" src={spd}/>
                 </div>
-                <div className="resource">
-                    <a href="https://sngi.org/">
-                        <h3>Seattle Neighborhood Group</h3>
-                        <img alt="seattle neighborhood group logo" src={sng}/>
-                    </a>
+                <div className="resource" onClick={() => {setRedirectTo("Seattle Neighborhood Group")}}>
+                    <h3>Seattle Neighborhood Group</h3>
+                    <img alt="seattle neighborhood group logo" src={sng}/>
                 </div>
             </section>
         </section> 

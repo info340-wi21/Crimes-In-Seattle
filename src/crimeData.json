@@ -1,11 +1,9 @@
 {
     "months": [{
-            "id": "1",
             "month": "",
             "points": []
         },
         {
-            "id": "2",
             "month": "January",
             "points": [
                 { "lat": 47.6300904, "long": -122.3153814, "description": "Noise Residential" },
@@ -30,7 +28,6 @@
             ]
         },
         {
-            "id": "3",
             "month": "February",
             "points": [
                 { "lat": 47.6003299, "long": -122.3033528, "description": "Prowler, Trespassing" },
@@ -57,7 +54,6 @@
             ]
         },
         {
-            "id": "4",
             "month": "March",
             "points": [
                 { "lat": 47.649324, "long": -122.3327054, "description": "Suspicious Activity" },
@@ -84,7 +80,6 @@
             ]
         },
         {
-            "id": "5",
             "month": "April",
             "points": [
                 { "lat": 47.6256436, "long": -122.2924695, "description": "Intoxicated Person" },
@@ -109,7 +104,6 @@
             ]
         },
         {
-            "id": "6",
             "month": "May",
             "points": [
                 { "lat": 47.5631767, "long": -122.3127139, "description": "Weapons Charge" },
@@ -134,7 +128,6 @@
             ]
         },
         {
-            "id": "7",
             "month": "June",
             "points": [
                 { "lat": 47.5696992, "long": -122.2908779, "description": "Shots Fired, No Injuries" },
@@ -158,7 +151,6 @@
             ]
         },
         {
-            "id": "8",
             "month": "July",
             "points": [
                 { "lat": 47.5839642, "long": -122.3287421, "description": "Narcotics Charge" },
@@ -182,7 +174,6 @@
             ]
         },
         {
-            "id": "9",
             "month": "August",
             "points": [
                 { "lat": 47.6361977, "long": -122.3061419, "description": "Theft, Assault" },
@@ -198,7 +189,6 @@
             ]
         },
         {
-            "id": "10",
             "month": "September",
             "points": [
                 { "lat": 47.6752983, "long": -122.387305, "description": "Residential Bugulary" },
@@ -222,7 +212,6 @@
             ]
         },
         {
-            "id": "11",
             "month": "October",
             "points": [
                 { "lat": 47.5836503, "long": -122.3043961, "description": "Vehicle Collision, Two Injuries" },
@@ -246,7 +235,6 @@
             ]
         },
         {
-            "id": "12",
             "month": "November",
             "points": [
                 { "lat": 47.6801535, "long": -122.3175769, "description": "Gunshots, One Death" },
@@ -270,7 +258,6 @@
             ]
         },
         {
-            "id": "13",
             "month": "December",
             "points": [
                 { "lat": 47.6502445, "long": -122.3511149, "description": "Vehicle Hijacking" },
