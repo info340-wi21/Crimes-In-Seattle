@@ -101,7 +101,7 @@ nav {
 
 header {
     padding-top: 6rem;
-    background: linear-gradient(to left, rgba(245, 246, 252, 0.2), rgba(0, 51, 51, .8)), url("./img/background.png");
+    background: linear-gradient(to left, rgba(245, 246, 252, 0.2), rgba(0, 51, 51, .8)), url("../img/background.png");
     color: white;
     text-shadow: 2px 2px gray;
 }
