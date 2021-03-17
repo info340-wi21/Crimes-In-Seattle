@@ -33,7 +33,7 @@ export function Card(props) {
       </div>)
   } else {
     card = (
-      <div onClick= { () => {props.clickCallback(props.month.month)}}>
+      <div className="card" onClick= { () => {props.clickCallback(props.month.month)}}>
         <div className="month">
           <h2> In {props.month.month} there were</h2>
           <p>{props.month.count}</p>
