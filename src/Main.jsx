@@ -1,10 +1,5 @@
-import alert from './img/alert.png';
-import spd from './img/spd.png';
-import sng from './img/sng.png';
 import { Redirect } from 'react-router-dom';
 import { useState } from 'react';
-
-
 
 export function Main() {
     return (
@@ -51,15 +46,15 @@ export function Resource() {
                 <h2>Resource Links</h2>
                 <div className="resource" onClick={() => {setRedirectTo("Alert Seattle")}} >
                     <h3>Official Emergency Notification for the City of Seattle</h3>
-                    <img alt="seattle alert log" src={alert}/>
+                    <img alt="seattle alert log" src={'../img/alert.png'}/>
                 </div>
                 <div className="resource" onClick={() => {setRedirectTo("Seattle Police")}} >
                     <h3>Seattle Police Department</h3>
-                    <img alt="seattle police department logo" src={spd}/>
+                    <img alt="seattle police department logo" src={"../img/spd.png"}/>
                 </div>
                 <div className="resource" onClick={() => {setRedirectTo("Seattle Neighborhood Group")}}>
                     <h3>Seattle Neighborhood Group</h3>
-                    <img alt="seattle neighborhood group logo" src={sng}/>
+                    <img alt="seattle neighborhood group logo" src={'../img/sng.png'}/>
                 </div>
             </section>
         </section> 
