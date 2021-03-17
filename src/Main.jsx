@@ -49,7 +49,7 @@ export function Resource() {
             </div>
             <section className="resources">
                 <h2>Resource Links</h2>
-                <div className="resource" onClick={() => {setRedirectTo("Seattle Alert")}} >
+                <div className="resource" onClick={() => {setRedirectTo("Alert Seattle")}} >
                     <h3>Official Emergency Notification for the City of Seattle</h3>
                     <img alt="seattle alert log" src={alert}/>
                 </div>
