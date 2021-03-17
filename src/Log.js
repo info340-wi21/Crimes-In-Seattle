@@ -147,7 +147,7 @@ export function GetInput(props) {
 export function NotSignedIn() {
     return <div>
         <h1>You must sign in to use the Log feature!</h1>
-        <h2>Go back to the Main page to sign in.</h2>
+        <h1>Go back to the Main page to sign in.</h1>
     </div>
 }
 
