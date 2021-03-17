@@ -244,3 +244,12 @@ p {
 img {
     width: 100%;
 }
+
+.aboutPage {
+    display: flex;
+    flex-direction: column;
+}
+
+.aboutPage img {
+    max-width: 300px;
+}

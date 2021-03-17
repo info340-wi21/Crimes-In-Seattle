@@ -10,7 +10,7 @@ export function About(props) {
     if(!resource) return <h2>No resource specified</h2>
 
     return (
-      <div>
+      <div className="aboutPage">
         <h1>{resource.resource}</h1>
         <p>{resource.description}</p>
         <img src={resource.img} alt={resource.resource + " image"}/>
