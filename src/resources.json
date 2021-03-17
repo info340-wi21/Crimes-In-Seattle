@@ -1,19 +1,19 @@
 [{
         "resource": "Alert Seattle",
         "description": "AlertSeattle is the official emergency notification system used by the City of Seattle to communicate with city residents during emergencies. Sign up now to receive free alerts from the City via text message, email, voice message or social media.",
-        "img": "img/alert.png",
+        "img": "../img/alert.png",
         "link": "https://alert.seattle.gov/"
     },
     {
         "resource": "Seattle Police",
         "description": "The Seattle Police Department is the principal law enforcement agency of the city of Seattle, Washington, United States, except for the campus of the University of Washington, which is under the responsibility of its own police department. ",
-        "img": "img/spd.png",
+        "img": "../img/spd.png",
         "link": "http://www.seattle.gov/police/need-help/when-should-i-call-911"
     },
     {
         "resource": "Seattle Neighborhood Group",
         "description": "Seattle Neighborhood Group educates, organizes, and collaborates with residents, businesses, government entities and other organizations to create safe communities through equitable engagement, with a focus on underserved populations.",
-        "img": "img/sng.png",
+        "img": "../img/sng.png",
         "link": "https://sngi.org/"
     }
 ]
