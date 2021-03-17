@@ -36,6 +36,7 @@ export default Main;
 export function Resource() {
 
     const [redirectTo, setRedirectTo] = useState(undefined);
+
     if (redirectTo) {
         return <Redirect push to={'/about/' + redirectTo}/>
     }

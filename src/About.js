@@ -4,7 +4,8 @@ import RESOURCES from './resources.json';
 import _ from 'lodash';
 
 export function About(props) {
-    let { resourceName } = useParams();   
+    let { resourceParams } = useParams();
+    let resourceName = resourceParams.resouceId;   
     let resource =  _.find(RESOURCES, {resource: resourceName});
 
     if(!resource) return <h2>No resource specified</h2>
