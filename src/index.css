@@ -235,6 +235,10 @@ iframe {
     border-radius: 3%;
 }
 
+.resource:hover {
+    cursor: hover;
+}
+
 p {
     padding-left: 3rem;
     padding-right: 3rem;
