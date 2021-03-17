@@ -113,7 +113,7 @@ export function Title() {
   return (
     <div className='heading'>
       <h1><Link to="/">Seattle Alerts</Link></h1>
-      <p>With our incident tracking plot and map below, gain a better understanding of your surroundings in Seattle</p>
+      <p>With our incident tracking plot and map, gain a better understanding of your surroundings in Seattle</p>
     </div>
   )
 }

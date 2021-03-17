@@ -1,10 +1,27 @@
 import {useState, useEffect} from 'react';
 import firebase from 'firebase/app';
-import { Form, FormGroup, Label, Input, Button, Alert, Card, CardGroup, CardBody, CardTitle, CardText } from 'reactstrap';
+import { Form, FormGroup, FormText, Label, Input, Button, Alert, Card, CardGroup, CardBody, CardTitle, CardText } from 'reactstrap';
 
 export function RenderLog() {
-
     let [user, setUser] = useState(undefined);
+
+    const inputItems = [
+        {
+            name: "incident",
+            placeholder: "What was the incident?",
+            label: "Incident:"
+        },
+        {
+            name: "month",
+            placeholder: "What month?",
+            label: "Month:"
+        },
+        {
+            name: "location",
+            placeholder: "What location?",
+            label: "Location:"
+        },
+    ];
 
     const [visible, setVisible] = useState(false);
     const showAlert = () => setVisible(true);
@@ -16,15 +33,17 @@ export function RenderLog() {
     let [month, setMonth] = useState('');
     let [location, setLocation] = useState('');
 
-    const handleIncidentChange = event => {
-        setIncident(event.target.value);
+    const handleChange = event => {
+        let input = event.target.id;
+        if (input === "incident") {
+            setIncident(event.target.value);
+        } else if (input === "month") {
+            setMonth(event.target.value);
+        } else {
+            setLocation(event.target.value);
+        }
     }
-    const handleMonthChange = event => {
-        setMonth(event.target.value);
-    }
-    const handleLocationChange = event => {
-        setLocation(event.target.value);
-    }
+
     const handleFormReset = event => {
         event.preventDefault();
         let clear = "";
@@ -62,13 +81,12 @@ export function RenderLog() {
                 incident={incident}
                 month={month}
                 location={location}
-                incidentChange={handleIncidentChange}
-                monthChange={handleMonthChange}
-                locationChange={handleLocationChange}
+                onChange={handleChange}
                 resetForm={handleFormReset}
                 visible={visible}
                 showAlert={showAlert}
                 closeAlert={closeAlert}
+                inputItems={inputItems}
             />
             <RenderUserLog user={user}/>
         </div>
@@ -77,55 +95,6 @@ export function RenderLog() {
 
 export function LogForm(props) {
     let userRef = firebase.database().ref(props.user.uid);
-
-    let incidentInput;
-    if (!props.incident) {
-        incidentInput = (
-            <FormGroup>
-                <Label for="incident">Incident:</Label>
-                <Input required type="text" name="incident" id="incident" placeholder="What was the incident?" value={props.incident} onChange={props.incidentChange} />
-            </FormGroup>
-        )
-    } else {
-        incidentInput = (
-            <FormGroup>
-                <Label for="incident">Incident:</Label>
-                <Input required valid type="text" name="incident" id="incident" placeholder="What was the incident?" value={props.incident} onChange={props.incidentChange} />
-            </FormGroup>
-        )
-    }
-    let monthInput;
-    if (!props.month) {
-        monthInput = (
-            <FormGroup>
-                <Label for="month">Month:</Label>
-                <Input required type="text" name="month" id="month" placeholder="What month?" value={props.month} onChange={props.monthChange} />
-            </FormGroup>
-        )
-    } else {
-        monthInput = (
-            <FormGroup>
-                <Label for="month">Month:</Label>
-                <Input valid required type="text" name="month" id="month" placeholder="What month?" value={props.month} onChange={props.monthChange} />
-            </FormGroup>
-        )
-    }
-    let locationInput;
-    if (!props.location) {
-        locationInput = (
-            <FormGroup>
-                <Label for="location">Location:</Label>
-                <Input required type="text" name="location" id="location" placeholder="What location?" value={props.location} onChange={props.locationChange} />
-            </FormGroup>
-        )
-    } else {
-        locationInput = (
-            <FormGroup>
-                <Label for="location">Location:</Label>
-                <Input valid required type="text" name="location" id="location" placeholder="What location?" value={props.location} onChange={props.locationChange} />
-            </FormGroup>
-        )
-    }
 
     let whenClicked = () => {
         if (props.incident && props.month && props.location) {
@@ -137,9 +106,9 @@ export function LogForm(props) {
 
     return <div className="logForm">
         <Form onSubmit={props.resetForm}>
-            {incidentInput}
-            {monthInput}
-            {locationInput}
+            <GetInput check={props.incident} onChange={props.onChange} info={props.inputItems[0]}/>
+            <GetInput check={props.month} onChange={props.onChange} info={props.inputItems[1]}/>
+            <GetInput check={props.location} onChange={props.onChange} info={props.inputItems[2]}/>
             <FormGroup>
                 <Button onClick={whenClicked} type="submit" color="primary">Submit</Button>
             </FormGroup>
@@ -149,6 +118,30 @@ export function LogForm(props) {
         </Form>
     </div>
 }
+
+export function GetInput(props) {
+    let input;
+    let check = props.check;
+    let info = props.info;
+    if (!check) {
+        input = (
+            <FormGroup>
+                <Label for={info.name}>{info.label}</Label>
+                <Input required type="text" name={info.name} id={info.name} placeholder={info.placeholder} value={check} onChange={props.onChange} />
+                <FormText color="danger">*Required</FormText>
+            </FormGroup>
+        )
+    } else {
+        input = (
+            <FormGroup>
+                <Label for={info.name}>{info.label}</Label>
+                <Input valid type="text" name={info.name} id={info.name} placeholder={info.placeholder} value={check} onChange={props.onChange} />
+            </FormGroup>
+        )
+    }
+    return input;
+}
+
 
 export function NotSignedIn() {
     return <div>
