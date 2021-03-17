@@ -236,7 +236,7 @@ iframe {
 }
 
 .resource:hover {
-    cursor: hover;
+    cursor: pointer;
 }
 
 p {
@@ -252,6 +252,7 @@ img {
 .aboutPage {
     display: flex;
     flex-direction: column;
+    padding-left: 3rem;
 }
 
 .aboutPage img {

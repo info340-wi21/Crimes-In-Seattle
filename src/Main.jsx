@@ -43,7 +43,7 @@ export function Resource() {
                 </iframe>
             </div>
             <section className="resources">
-                <h2>Resource Links - Check it Out</h2>
+                <h2>Resource Links</h2>
                 <div className="resource" onClick={() => {setRedirectTo("Alert Seattle")}} >
                     <h3>Official Emergency Notification for the City of Seattle</h3>
                     <img alt="seattle alert log" src={'../img/alert.png'}/>

@@ -136,7 +136,7 @@ export function GetInput(props) {
             <FormGroup>
                 <Label for={info.name}>{info.label}</Label>
                 <Input valid type="text" name={info.name} id={info.name} placeholder={info.placeholder} value={check} onChange={props.onChange} />
-                <FormFeedback valid>Nice!</FormFeedback>
+                <FormFeedback valid>Completed</FormFeedback>
             </FormGroup>
         )
     }
