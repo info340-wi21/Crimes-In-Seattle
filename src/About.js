@@ -13,7 +13,7 @@ export function About(props) {
       <div>
         <h1>{resource.resource}</h1>
         <p>{resource.description}</p>
-        <img src={resource.img} alt={resource.resource + "image"}/>
+        <img src={resource.img} alt={resource.resource + " image"}/>
         <a href={resource.link}>Click me to visit the Resource webpage</a>
       </div>
     )
