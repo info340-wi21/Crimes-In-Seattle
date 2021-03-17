@@ -30,6 +30,11 @@
     font-size: large;
 }
 
+.card section {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
 
 /* Body styling */
 
@@ -40,7 +45,7 @@ body {
 }
 
 
-/* Navagation bar styling */
+/* Navigation bar styling */
 
 .heading {
     display: flex;
@@ -56,7 +61,7 @@ nav {
 }
 
 .navbar {
-    height: 3rem;
+    height: fit-content;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -64,9 +69,9 @@ nav {
 
 .navbar .nav-items {
     list-style: none;
-    margin-right: 2rem;
+    margin-right: 1rem;
     display: inline-block;
-    padding: 1rem;
+    padding: .1rem;
     font-size: 20px;
     font-weight: bold;
 }
@@ -85,11 +90,17 @@ nav {
     max-height: 2rem;
 }
 
+@media (max-width: 550px) {
+    .navbar {
+        font-size: 10px;
+    }
+}
+
 
 /* Page header styling */
 
 header {
-    padding-top: 4rem;
+    padding-top: 6rem;
     background: linear-gradient(to left, rgba(245, 246, 252, 0.2), rgba(0, 51, 51, .8)), url("./img/background.png");
     color: white;
     text-shadow: 2px 2px gray;

@@ -1,6 +1,6 @@
 import {useState, useEffect} from 'react';
 import firebase from 'firebase/app';
-import { Form, FormGroup, FormText, Label, Input, Button, Alert, Card, CardGroup, CardBody, CardTitle, CardText } from 'reactstrap';
+import { Form, FormFeedback, FormGroup, FormText, Label, Input, Button, Alert, Card, CardGroup, CardBody, CardTitle, CardText } from 'reactstrap';
 
 export function RenderLog() {
     let [user, setUser] = useState(undefined);
@@ -136,6 +136,7 @@ export function GetInput(props) {
             <FormGroup>
                 <Label for={info.name}>{info.label}</Label>
                 <Input valid type="text" name={info.name} id={info.name} placeholder={info.placeholder} value={check} onChange={props.onChange} />
+                <FormFeedback valid>Nice!</FormFeedback>
             </FormGroup>
         )
     }
