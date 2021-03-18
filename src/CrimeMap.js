@@ -38,7 +38,7 @@ export function Introduction() {
   return (
     <div className="aboutPage">
       <h1>Map</h1>
-      <p>Utilize the map feature below to view the locations of incidents per month throughout the city of Seattle</p>
+      <p>Utilize the map feature below to view the locations of incidents per month throughout the city of Seattle. And click on each marker to see the incident</p>
     </div>
   )
 }

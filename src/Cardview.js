@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 export function CardList(props) {
 
-  const theMonths = props.data.months;
+  const theMonths = props.months;
 
   const [clicked, setClick] = useState(theMonths);
 
