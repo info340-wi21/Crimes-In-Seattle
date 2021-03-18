@@ -40,7 +40,7 @@ export function RenderSignIn() {
         return <div className='d-flex justify-content-center m-2'><p>Loading...</p></div>
     }
     if(!user) {
-        return <StyledFirebaseAuth className='d-flex justify-content-centerm-2' uiConfig={uiConfig} firebaseAuth={firebase.auth()}/>
+        return <StyledFirebaseAuth className='d-flex justify-content-center m-2' uiConfig={uiConfig} firebaseAuth={firebase.auth()}/>
     } else {
         return (<div className='d-flex justify-content-center m-2'>
             <button onClick={() => {firebase.auth().signOut()}}>Sign Out</button>

@@ -8,8 +8,12 @@ export function CardList(props) {
     return <Card month={month} key={month.month} clickCallback={props.clickCallback}></Card> 
   });
   return (
-    <div className="card-container">
+    <div>
+      <h1>2020 Monthly Cards</h1>
+      <p>Click on the month cards below to viwe the most common type of incidents that occured that month.</p>
+      <div className="card-container">
         { cards }
+      </div>
     </div>
   );
 }

@@ -16,17 +16,33 @@ export function CrimeMap(props) {
   let crimeData = props.points;
 
   return (
-    <section>
-      <MapContainer center={seattle} zoom={12}>
-        <Tile />
-        <GetMarkers points={crimeData} value={selectValue}/>
-      </MapContainer> 
-      <Selector value={selectValue} onChange={handleChange}/>
-    </section>
+    <div>
+      <Introduction />
+      <div className="container">
+        <section>
+          <MapContainer center={seattle} zoom={12}>
+            <Tile />
+            <GetMarkers points={crimeData} value={selectValue}/>
+          </MapContainer> 
+          <Selector value={selectValue} onChange={handleChange}/>
+        </section>
+      </div>
+    </div>
   )
 }
 
 export default CrimeMap;
+
+export function Introduction() {
+
+  return (
+    <div className="aboutPage">
+      <h1>Map</h1>
+      <p>Utilize the map feature below to view the locations of incidents per month throughout the city of Seattle</p>
+    </div>
+  )
+}
+
 
 export function Tile() {
   return (
