@@ -5,7 +5,7 @@ import { Switch } from 'react-router-dom';
 import 'leaflet/dist/leaflet.css';
 import { RenderSignIn } from './SignIn';
 import { RenderLog } from './Log';
-import React, { useState } from 'react';
+import React from 'react';
 import { HistogramChart } from './Histogram';
 import { CardList } from './Cardview'
 import { Footer } from './Footer';
@@ -13,20 +13,6 @@ import { Header } from './Header';
 import { About } from './About';
 
 function App(props) {
-
-  const theMonths = props.data.months;
-
-  const [clicked, setClick] = useState(theMonths);
-
-  const handleClick = (month) => {
-    const monthsCopy =  clicked.map( months => {
-      if (months.month === month) { 
-          months.clicked = true;
-      }
-      return months;
-    });
-    setClick(monthsCopy);
-  }
 
   return (
     <div>
@@ -40,7 +26,7 @@ function App(props) {
             <Main />
           </Route>
           <Route path="/histogram">
-              <CardList months = { props.data.months } clickCallback= { handleClick }/>
+              <CardList months = { props.data.months }/>
               <HistogramChart months = { props.data.months }/>
           </Route>
           <Route path="/map">

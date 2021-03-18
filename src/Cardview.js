@@ -1,12 +1,30 @@
+import { useState } from 'react';
+
 export function CardList(props) {
+
+  const theMonths = props.data.months;
+
+  const [clicked, setClick] = useState(theMonths);
+
+  const handleClick = (month) => {
+    const monthsCopy =  clicked.map( months => {
+      if (months.month === month) { 
+          months.clicked = true;
+      }
+      return months;
+    });
+    setClick(monthsCopy);
+  }
+
   let monthsdata = [];
   let months = props.months;
   for(let i = 1; i < props.months.length; i++){
     monthsdata.push({month : months[i].month, count : months[i].points.length, clicked: months[i].clicked, points: months[i].points})
   }
   let cards = monthsdata.map((month) => {
-    return <Card month={month} key={month.month} clickCallback={props.clickCallback}></Card> 
+    return <Card month={month} key={month.month} clickCallback={handleClick}></Card> 
   });
+  
   return (
     <div>
       <h1>2020 Monthly Cards</h1>
