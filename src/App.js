@@ -1,7 +1,7 @@
 import { CrimeMap } from './CrimeMap';
 import Main from './Main';
 import {Redirect, Route} from 'react-router-dom';
-import Switch from 'react-router-dom';
+import { Switch } from 'react-router-dom';
 import 'leaflet/dist/leaflet.css';
 import { RenderSignIn } from './SignIn';
 import { RenderLog } from './Log';

@@ -1,4 +1,4 @@
-export default function CardList(props) {
+export function CardList(props) {
   let monthsdata = [];
   let months = props.months;
   for(let i = 1; i < props.months.length; i++){
