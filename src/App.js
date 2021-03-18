@@ -1,16 +1,16 @@
-import CrimeMap from './CrimeMap';
+import { CrimeMap } from './CrimeMap';
 import Main from './Main';
 import {Redirect, Route} from 'react-router-dom';
 import Switch from 'react-router-dom';
 import 'leaflet/dist/leaflet.css';
-import RenderSignIn from './SignIn';
-import RenderLog from './Log';
+import { RenderSignIn } from './SignIn';
+import { RenderLog } from './Log';
 import React, { useState } from 'react';
-import HistogramChart from './Histogram';
-import CardList from './Cardview'
-import Footer from './Footer';
-import Header from './Header';
-import About from './About';
+import { HistogramChart } from './Histogram';
+import { CardList } from './Cardview'
+import { Footer } from './Footer';
+import { Header } from './Header';
+import { About } from './About';
 
 function App(props) {
 
