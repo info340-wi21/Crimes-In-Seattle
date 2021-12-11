@@ -1,0 +1,260 @@
+* {
+    font-family: 'Courier New', Courier, monospace;
+    box-sizing: border-box;
+}
+
+.card-container {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card {
+    /* flex: 0 0 250px; */
+    background-color: white;
+    margin: .5rem;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);
+    width: 250px;
+    min-height: 150px;
+    text-align: center;
+    padding: .5rem;
+}
+
+.card:hover {
+    cursor: pointer;
+}
+
+.card h2 {
+    font-size: large;
+}
+
+.card section {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+
+/* Body styling */
+
+body {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Navigation bar styling */
+
+.heading {
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    background-color: rgba(2, 2, 2, 0.7);
+    box-shadow: 1px 2px 4px grey;
+}
+
+.navbar {
+    height: fit-content;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.navbar .nav-items {
+    list-style: none;
+    margin-right: 1rem;
+    display: inline-block;
+    padding: .1rem;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.navbar .nav-items a {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar .nav-items a:hover {
+    color: gray;
+}
+
+.icon-style {
+    max-width: 2rem;
+    max-height: 2rem;
+}
+
+@media (max-width: 550px) {
+    .navbar {
+        font-size: 10px;
+    }
+}
+
+
+/* Page header styling */
+
+header {
+    padding-top: 6rem;
+    background: linear-gradient(to left, rgba(245, 246, 252, 0.2), rgba(0, 51, 51, .8)), url("./img/background.png");
+    color: white;
+    text-shadow: 2px 2px gray;
+}
+
+header p {
+    font-size: larger;
+}
+
+header div {
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-left: 5rem;
+}
+
+
+/* Intro/About section styling */
+
+#about {
+    width: 100%;
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    padding-top: 1rem;
+}
+
+#about h2 {
+    text-align: center;
+}
+
+
+/* Interactive Map & Plot styling */
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
+/* .chart-container {
+    width: 100%;
+    height: 100%;
+} */
+
+.container section {
+    background-color: lightgray;
+    border-style: groove;
+    text-align: center;
+    width: 80%;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1rem;
+}
+
+p {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    display: block;
+}
+
+img {
+    width: 100%;
+}
+
+.leaflet-container {
+    height: 100%;
+    width: 100%;
+}
+
+
+/* Footer Styling */
+
+footer {
+    text-align: center;
+}
+
+Form {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    padding-top: 1rem;
+}
+
+.logForm Form {
+    display: flex;
+    width: 100%;
+    padding: 1rem;
+}
+
+
+/* Video styling */
+
+.video,
+.resources {
+    margin: 2rem;
+}
+
+iframe {
+    width: 712px;
+    height: 400px;
+}
+
+.landing {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
+/* Resources styling */
+
+.resources {
+    overflow: scroll;
+    height: 400px;
+    background-color: lightgray;
+    border-radius: 5%;
+    text-align: center;
+}
+
+.resource {
+    max-width: 500px;
+    margin: 1rem;
+    background: white;
+    border-radius: 3%;
+}
+
+.resource:hover {
+    cursor: pointer;
+}
+
+p {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    display: block;
+}
+
+img {
+    width: 100%;
+}
+
+.aboutPage {
+    display: flex;
+    flex-direction: column;
+    padding-left: 3rem;
+}
+
+.aboutPage img {
+    max-width: 300px;
+}
